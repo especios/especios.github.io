@@ -3,17 +3,10 @@
 
 (() => {
 
-    const { Observable, from, pipe, take, fromEvent} = rxjs;
-    const print = ( value ) => {
-        console.log( value.screenX, value.screenY )
-        let el = document.createElement('p');
-            el.innerText = JSON.stringify( {x : value.screenX, y: value.screenY} ) ;
-        document.body.appendChild( el );
-     }
-
-    const observable = rxjs.fromEvent( document , 'click')
-    observable.pipe(
-    ).subscribe( hey => {
+    const { Observable, from, pipe, take, fromEvent } = rxjs;
+   
+    const clicks$ = rxjs.fromEvent( document , 'click')
+    clicks$.subscribe( hey => {
         addObjectInPosition(hey.x , hey.y);
     })
 

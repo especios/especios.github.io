@@ -1,26 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Roboto:wght@100&family=Source+Sans+Pro:wght@200;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Nunito:wght@500&family=Roboto:wght@100&family=Source+Sans+Pro:wght@200;900&display=swap');
 body {
   /* background-color: #E0ECE4; */
-  background-color: #D8D3CD;
+  background-color: #f1f6ff;
   display: flex;
   min-height: 100vh;
   margin: 0;
 }
 
 .title {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-size: 43px;
-    font-weight: bolder;
-    color: #E0ECE4;
-    background-color: #C0D8B4;  
+  font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #61605e;
+    padding: 0px 10px 2px 10px;
 }
 
 .floating{
     position:absolute;
     margin: auto;
-    color: #F7F2E7;
+    color: #b1b6b3;
     font-family: 'Source Sans Pro', sans-serif;
+    
     opacity: 20%;
     z-index: -1;
 }
@@ -29,4 +30,17 @@ main {
   margin: auto;
 }
 
-
+.sailing { 
+    animation-name: sailing;
+    animation-duration: 4.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+ 
+@keyframes sailing {
+    from { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 8px); }
+    to   { transform: translate(0, -0px); }   
+}
